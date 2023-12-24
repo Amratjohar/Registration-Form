@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header1}}
+</head>
+<body>
+    {{>navbar}}
+    <div class="hero">
+        <div class="form-box"> 
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log-In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+       
+        <form action="/login" method="POST" class="inputgroup" id="log">
+            <input type="text" name="username" class="inputf" placeholder="Enter Username" required>
+            <input type="text" name="password" class="inputf" placeholder="Enter Password" required>
+            <input type="checkbox" name="" class="check-box" required><span>Remember Password</span>
+
+            <button type="submit" class="sub-btn">Log-In</button>
+        </form> 
+
+        <form action="/register"  method="POST" class="inputgroup1" id="reg">
+            <input type="text" name="username" class="inputf1" placeholder="Enter Username" >
+            <input type="email" name="email" class="inputf1" placeholder="Enter Email" >
+            <input type="password" name="password" class="inputf1" placeholder="Enter Password" >
+            <input type="checkbox" name="" class="check-box" required><span>I agree to terms and conditions</span>
+
+            <button type="submit" class="sub-btn">Register</button>
+        </form> 
+        </div>
+    </div>
+
+    <script>
+        var x= document.getElementById("log");
+        var y= document.getElementById("reg");
+        var z= document.getElementById("btn");
+
+    function register(){
+        x.style.left="-480px";
+        y.style.left="50px";
+        z.style.left="110px";
+    }
+
+    function login(){
+        x.style.left="50px";
+        y.style.left="450px";
+        z.style.left="0px";
+    }
+    </script>
+</body>
+</html>
